@@ -24,7 +24,7 @@ steghide embed -cf pic.jpg -ef secret.txt
 # Display info about a file whether it has embedded secrets
 steghide info pic.jpg
 
-# Extract secrect from a picture
+# Extract secret from a picture
 steghide extract -sf pic.jpg
 ```
 
@@ -49,3 +49,84 @@ cd exploitdb && ./searchsploit -h
 [National Vulnerability Database](https://nvd.nist.gov/vuln/search)
 
 [CVE Mitre](https://cve.mitre.org/)
+
+## Find files on Linux
+
+```bash
+# Find by filename
+find / -name passwords.txt
+
+# Find by extension
+find / -iname *.txt
+
+# Fast way to find files
+locate passwords.txt
+```
+
+## NMAP Basic
+
+```bash
+# Syn Scan
+sudo nmap -sS my-host-name
+
+# UDP Scan
+sudo nmap -sU my-host-name
+
+# TCP scan in all ports
+sudo nmap -sT -p- my-host-name
+
+# NULL, FIN and Xmas Scan
+sudo nmap -sN my-host-name
+sudo nmap -sF my-host-name
+sudo nmap -sX my-host-name
+
+# Scan without ping
+sudo nmap -Pn my-host-nmae
+
+# Ping sweep scan
+sudo nmap -sn 192.168.0.-
+
+# Verbose modes: -v, -vv or -vvv
+sudo nmap -vv -p 8080 my-host-name
+
+# Detect version of services
+sudo nmap -sV my-host-name
+
+# Try detect operating system
+sudo nmap -O my-host-name
+```
+
+## NMAP Scripts
+
+```bash
+# Search for Nmap scripts related to ftp
+grep "ftp" /usr/share/nmap/scripts/script.db
+
+# Scan with all scripts from vuln category
+sudo nmap --script=vuln my-host-name
+```
+
+## SMB and SAMBA
+
+```bash
+# Download enum4linux tool
+sudo apt install polenum
+git clone https://github.com/CiscoCXSecurity/enum4linux.git
+cd enum4linux && ./enum4linux.pl
+
+# Download enum4linux-ng tool
+git clone https://github.com/cddmp/enum4linux-ng.git
+cd enum4linux-ng && ./enum4linux-ng.py
+
+# Try get a user list from SMB
+./enum4linux.pl -U my-host-name
+
+# Try get a share list from SMD
+./enum4linux.pl -S my-host-name
+
+# Enumerate SMB/Samba
+./enum4linux.pl -a my-host-name
+
+# Access a shared folder with smbclient
+smbclient //some-host-name-or-ip/shared-folder -U user -p 445
+```
