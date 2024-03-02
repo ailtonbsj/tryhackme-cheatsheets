@@ -94,6 +94,9 @@ sudo nmap -sV my-host-name
 
 # Try detect operating system
 sudo nmap -O my-host-name
+
+# Speed of scan -T0 (slow) to -T5 (fast)
+sudo nmap -vv -p- -T5 my-host-name
 ```
 
 ## NMAP Scripts
@@ -127,6 +130,28 @@ cd enum4linux-ng && ./enum4linux-ng.py
 # Enumerate SMB/Samba
 ./enum4linux.pl -a my-host-name
 
-# Access a shared folder with smbclient
-smbclient //some-host-name-or-ip/shared-folder -U user -p 445
+# Access a public shared folder with smbclient (password: anonymous)
+smbclient //some-host-name-or-ip/shared-folder -U anonymous -p 445
+```
+
+## Dumping network traffic
+
+```bash
+# Dumping ICMP packages from VPN interface
+sudo tcpdump ip proto \\icmp -i tun0
+```
+
+## Metasploit Framework
+
+```bash
+# Install GPG key from Metaploit repository
+sudo wget https://apt.metasploit.com/metasploit-framework.gpg.key \
+-O /etc/apt/trusted.gpg.d/metasploit.asc
+
+# Install Metaploit repository
+echo "deb https://apt.metasploit.com xenial main" | \
+sudo tee /etc/apt/sources.list.d/metasploit.list
+
+# Install Metaploit framework
+sudo apt list metasploit-framework
 ```
