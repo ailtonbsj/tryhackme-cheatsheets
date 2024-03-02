@@ -110,7 +110,7 @@ sudo nmap --script=vuln my-host-name
 
 ```bash
 # Download enum4linux tool
-sudo apt install polenum
+sudo apt install samba-common-bin smbclient ldap-utils polenum
 git clone https://github.com/CiscoCXSecurity/enum4linux.git
 cd enum4linux && ./enum4linux.pl
 
