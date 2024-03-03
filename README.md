@@ -218,11 +218,20 @@ hydra -t 16 -l USER -P wordlist.txt -vV TARGET-HOST ssh
 ## Wordlists
 
 ```bash
-# Download rockyou wordlist
+# --- Passwords List ---
+
+# rockyou.txt
 wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 
-# Download top-usernames-shortlist wordlist
+# --- Usernames List ---
+
+# top-usernames-shortlist.txt
 wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/top-usernames-shortlist.txt
+
+# --- Directories List ---
+
+# directory-list-2.3-medium.txt
+wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/directory-list-2.3-medium.txt
 ```
 
 [SecLists](https://github.com/danielmiessler/SecLists)
@@ -269,3 +278,14 @@ sudo snap install john-the-riper
 echo "user:*SOME_HEXADECIMAL_RANDOM_HASH_STORED_DB" > hash.txt
 john hash.txt
 ```
+
+# Scanning Website
+
+```bash
+# Install Gobuster tool
+wget https://github.com/OJ/gobuster/releases/download/v3.6.0/gobuster_Linux_x86_64.tar.gz
+tar -xzf gobuster_Linux_x86_64.tar.gz -C /tmp
+mv /tmp/gobuster /usr/local/bin/gobuster
+```
+
+[Gobuster Github](https://github.com/OJ/gobuster)
