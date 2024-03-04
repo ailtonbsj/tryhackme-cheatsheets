@@ -109,7 +109,7 @@ echo "user:*SOME_HEXADECIMAL_RANDOM_HASH_STORED_DB" > hash.txt
 john hash.txt
 ```
 
-# Scanning Website
+## Scanning Website
 
 ```bash
 # Install Gobuster tool
