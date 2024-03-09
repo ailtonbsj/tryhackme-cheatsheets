@@ -4,36 +4,60 @@
 
 ```bash
 # Syn Scan
-sudo nmap -sS my-host-name
+sudo nmap -sS target-host
 
 # UDP Scan
-sudo nmap -sU my-host-name
+sudo nmap -sU target-host
 
 # TCP scan in all ports
-sudo nmap -sT -p- my-host-name
+sudo nmap -sT -p- target-host
 
 # NULL, FIN and Xmas Scan
-sudo nmap -sN my-host-name
-sudo nmap -sF my-host-name
-sudo nmap -sX my-host-name
+sudo nmap -sN target-host
+sudo nmap -sF target-host
+sudo nmap -sX target-host
 
 # Scan without ping
 sudo nmap -Pn my-host-nmae
 
-# Ping sweep scan
-sudo nmap -sn 192.168.0.-
-
 # Verbose modes: -v, -vv or -vvv
-sudo nmap -vv -p 8080 my-host-name
+sudo nmap -vv -p 8080 target-host
 
 # Detect version of services
-sudo nmap -sV my-host-name
+sudo nmap -sV target-host
 
 # Try detect operating system
-sudo nmap -O my-host-name
+sudo nmap -O target-host
 
 # Speed of scan -T0 (slow) to -T5 (fast)
-sudo nmap -vv -p- -T5 my-host-name
+sudo nmap -vv -p- -T5 target-host
+
+# Show a list of targets
+sudo namp -sL 192.168.1.0/24
+
+# Ping sweep scan
+sudo nmap -sn 192.168.1.-
+
+# ARP scan
+sudo nmap -sn -PR 192.168.1.0/24
+
+# ICMP echo scan
+sudo nmap -sn -PE 192.168.1.0/24
+
+# ICMP timestamp scan 
+sudo nmap -sn -PP 192.168.1.0/24
+
+# ICMP mask query scan 
+sudo nmap -sn -PM 192.168.1.0/24
+
+# Ping sweep with SYN scan 
+sudo nmap -sn -PS22,80,443 192.168.1.0/24
+
+# Ping sweep with ACK scan 
+sudo nmap -sn -PA22,80,443 192.168.1.0/24
+
+# Ping sweep with UDP scan 
+sudo nmap -sn -PU 192.168.1.0/24
 ```
 
 ## Scripts
@@ -43,5 +67,5 @@ sudo nmap -vv -p- -T5 my-host-name
 grep "ftp" /usr/share/nmap/scripts/script.db
 
 # Scan with all scripts from vuln category
-sudo nmap --script=vuln my-host-name
+sudo nmap --script=vuln target-host
 ```
