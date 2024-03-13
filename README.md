@@ -20,7 +20,7 @@ Some stuffs learned in war rooms from TryHackMe platform.
 - Privilege Escalation
     - [Find on Linux](FIND-ON-LINUX.md)
     - [Automated Enumeration Tools](ENUMERATION-TOOLS.md)
-    - [MySQL](MYSQL.md)
+    - [DATABASES](DATABASES.md)
 - Post-exploitation
 - Encryption
     - [Steganography](STEGANOGRAPHY.md)
