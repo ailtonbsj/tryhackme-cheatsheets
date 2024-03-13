@@ -18,6 +18,7 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [Wordlists](WORDLISTS.md)
     - [SQL Injection](SQL-INJECTION.md)
     - [Command Injection](COMMAND-INJECTION.md)
+    - [Exploits Utils](EXPLOITS.md)
 - Privilege Escalation
     - [Find on Linux](FIND-ON-LINUX.md)
     - [Automated Enumeration Tools](ENUMERATION-TOOLS.md)
