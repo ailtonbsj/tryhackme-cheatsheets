@@ -17,6 +17,7 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [John The Ripper](JOHN-THE-RIPPER.md)
     - [Wordlists](WORDLISTS.md)
     - [SQL Injection](SQL-INJECTION.md)
+    - [Command Injection](COMMAND-INJECTION.md)
 - Privilege Escalation
     - [Find on Linux](FIND-ON-LINUX.md)
     - [Automated Enumeration Tools](ENUMERATION-TOOLS.md)
