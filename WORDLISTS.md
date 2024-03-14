@@ -18,6 +18,11 @@ wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/dir
 
 # directory-list-2.3-big.txt
 wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/directory-list-2.3-big.txt
+
+# --- Extensions List ---
+
+# PHP Extensions
+printf "php\nphp3\nphp4\nphp5\nphtml\n" > phpext.txt
 ```
 
 [SecLists](https://github.com/danielmiessler/SecLists)
