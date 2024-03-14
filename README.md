@@ -19,6 +19,7 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [SQL Injection](SQL-INJECTION.md)
     - [Command Injection](COMMAND-INJECTION.md)
     - [Exploits Utils](EXPLOITS.md)
+    - [JWT](JWT.md)
 - Privilege Escalation
     - [Find on Linux](FIND-ON-LINUX.md)
     - [Automated Enumeration Tools](ENUMERATION-TOOLS.md)
@@ -27,3 +28,4 @@ Some stuffs learned in war rooms from TryHackMe platform.
 - Encryption
     - [Steganography](STEGANOGRAPHY.md)
     - [VPN](VPN.md)
+    - [SRI Hash](https://www.srihash.org)
