@@ -14,4 +14,8 @@ john hash.txt
 # Crack MD5 hashes (generated with md5sum)
 echo -n "SOME_HEXADECIMAL_RANDOM_HASH" > hash.txt
 john --format=raw-md5 --wordlist=./rockyou.txt hash.txt
+
+# Crack Linux shadow password
+unshadow passwd shadow > passwords.txt
+john pass.txt
 ```

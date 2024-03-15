@@ -29,3 +29,4 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [Steganography](STEGANOGRAPHY.md)
     - [VPN](VPN.md)
     - [SRI Hash](https://www.srihash.org)
+    - [OpenSSL](OPENSSL.md)
