@@ -20,10 +20,11 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [Command Injection](COMMAND-INJECTION.md)
     - [Exploits Utils](EXPLOITS.md)
     - [JWT](JWT.md)
+    - [Reverse Shells](REVERSE-SHELLS.md)
 - Privilege Escalation
     - [Find on Linux](FIND-ON-LINUX.md)
     - [Automated Enumeration Tools](ENUMERATION-TOOLS.md)
-    - [DATABASES](DATABASES.md)
+    - [Databases](DATABASES.md)
 - Post-exploitation
 - Encryption
     - [Steganography](STEGANOGRAPHY.md)

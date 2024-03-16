@@ -1,6 +1,6 @@
 # Network Scanning
 
-## APRN Scan
+## ARP Scan
 
 ```bash
 # Install arp-can tool
