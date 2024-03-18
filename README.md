@@ -21,6 +21,7 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [Exploits Utils](EXPLOITS.md)
     - [JWT](JWT.md)
     - [Reverse Shells](REVERSE-SHELLS.md)
+    - [Null Code](NULL-CODE.md)
 - Privilege Escalation
     - [Find on Linux](FIND-ON-LINUX.md)
     - [Automated Enumeration Tools](ENUMERATION-TOOLS.md)
