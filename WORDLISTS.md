@@ -6,6 +6,9 @@
 # rockyou.txt
 wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 
+# best1050
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/best1050.txt
+
 # --- Usernames List ---
 
 # top-usernames-shortlist.txt
