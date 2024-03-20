@@ -22,6 +22,7 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [JWT](JWT.md)
     - [Reverse Shells](REVERSE-SHELLS.md)
     - [Null Code](NULL-CODE.md)
+    - [XSS](XSS.md)
 - Privilege Escalation
     - [Find on Linux](FIND-ON-LINUX.md)
     - [Automated Enumeration Tools](ENUMERATION-TOOLS.md)
