@@ -16,5 +16,6 @@ find / -type f -perm -04000 -ls 2>/dev/null
 # Search files with capabilities
 getcap -r / 2>/dev/null
 
-
+# Find files and folders with write permission
+find / -writable -ls 2>/dev/null | grep -v '/sys\|/proc\|/run\|/snap'
 ```
