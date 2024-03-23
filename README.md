@@ -27,6 +27,7 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [Find on Linux](FIND-ON-LINUX.md)
     - [Automated Enumeration Tools](ENUMERATION-TOOLS.md)
     - [Databases](DATABASES.md)
+    - [C++ codes](C++-CODE.md)
 - Post-exploitation
 - Encryption
     - [Steganography](STEGANOGRAPHY.md)
