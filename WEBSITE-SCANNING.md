@@ -1,5 +1,16 @@
 # Website Scanning
 
+## Nikto
+
+```bash
+# Download Niko Webserver Scanner
+git clone https://github.com/sullo/nikto
+cd nikto/program
+
+# Run scanner
+./nikto.pl -h TARGET-HOST
+```
+
 ## Gobuster
 
 ```bash
