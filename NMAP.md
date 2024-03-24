@@ -58,6 +58,9 @@ sudo nmap -sn -PA22,80,443 192.168.1.0/24
 
 # Ping sweep with UDP scan 
 sudo nmap -sn -PU 192.168.1.0/24
+
+# Save output on file.txt
+sudo nmap -sV -oN file.txt 192.168.1.0/24
 ```
 
 ## Scripts
@@ -68,4 +71,7 @@ grep "ftp" /usr/share/nmap/scripts/script.db
 
 # Scan with all scripts from vuln category
 sudo nmap --script=vuln target-host
+
+# Scan with common scripts. Equivalent to: --script=default
+sudo nmap -sC target-host
 ```
