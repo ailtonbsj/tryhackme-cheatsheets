@@ -34,3 +34,4 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [VPN](VPN.md)
     - [SRI Hash](https://www.srihash.org)
     - [OpenSSL](OPENSSL.md)
+    - [GPG and PGP](GPG.md)
