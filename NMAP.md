@@ -74,4 +74,7 @@ sudo nmap --script=vuln target-host
 
 # Scan with common scripts. Equivalent to: --script=default
 sudo nmap -sC target-host
+
+# Scan for SMB vulnerability
+sudo nmap -p 445 --script=smb-vuln* target-host
 ```

