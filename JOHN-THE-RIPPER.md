@@ -22,4 +22,8 @@ john pass.txt
 # Crack SSH RSA private key
 ssh2john.py id_rsa > rsa.txt
 john rsa.txt
+
+# Crack Windows NTLM hashes
+# Administrator::500:SOME_HEX_RANDOM:HERE_IS_YOUR_HASH:::
+john --format=NT --wordlist=./rockyou.txt hash.txt
 ```
