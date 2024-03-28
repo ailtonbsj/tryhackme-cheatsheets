@@ -17,7 +17,8 @@ john --format=raw-md5 --wordlist=./rockyou.txt hash.txt
 
 # Crack Linux shadow password
 unshadow passwd shadow > passwords.txt
-john pass.txt
+john --wordlist=./rockyou.txt passwords.txt
+john passwords.txt
 
 # Crack SSH RSA private key
 ssh2john.py id_rsa > rsa.txt

