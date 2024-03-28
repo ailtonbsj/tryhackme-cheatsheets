@@ -25,6 +25,7 @@ Some stuffs learned in war rooms from TryHackMe platform.
     - [XSS](XSS.md)
 - Privilege Escalation
     - [Find on Linux](FIND-ON-LINUX.md)
+    - [Linux Techniques](LINUX-PRIV-ESC.md)
     - [Automated Enumeration Tools](ENUMERATION-TOOLS.md)
     - [Databases](DATABASES.md)
     - [C++ codes](C++-CODE.md)
