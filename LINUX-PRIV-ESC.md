@@ -20,3 +20,11 @@ openssl passwd some-password-here
 vim /etc/shadow
 ```
 
+## Sudo escalation
+
+```bash
+# Check programs allowed
+sudo -l
+```
+
+[https://gtfobins.github.io](https://gtfobins.github.io)
