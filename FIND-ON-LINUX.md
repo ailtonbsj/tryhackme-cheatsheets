@@ -12,6 +12,7 @@ locate passwords.txt
 
 # Find all SUID and GSID files
 find / -type f -perm -04000 -ls 2>/dev/null
+find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
 
 # Search files with capabilities
 getcap -r / 2>/dev/null

