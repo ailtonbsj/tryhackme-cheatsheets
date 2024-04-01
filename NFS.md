@@ -8,7 +8,10 @@ sudo apt install nfs-common
 showmount -e IP-OR-HOST
 
 # Mount shared folder
-sudo mount HOSTNAME:/SHARED-FOLDER /your/folder -nolock
+sudo mount -nolock HOSTNAME:/SHARED-FOLDER /your/folder
+
+# Mount shared folder
+sudo mount -o rw,vers=3 HOSTNAME:/SHARED-FOLDER /your/folder
 
 # Check permissions of files
 stat your-file
