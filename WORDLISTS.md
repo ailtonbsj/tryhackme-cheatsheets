@@ -22,6 +22,9 @@ wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/dir
 # directory-list-2.3-big.txt
 wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/directory-list-2.3-big.txt
 
+# directory-list-1.0.txt
+wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/directory-list-1.0.txt
+
 # --- Extensions List ---
 
 # PHP Extensions

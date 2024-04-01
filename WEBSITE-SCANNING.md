@@ -20,6 +20,9 @@ tar -xzf gobuster_Linux_x86_64.tar.gz -C /tmp
 sudo mv /tmp/gobuster /usr/local/bin/gobuster
 
 # Enumerate directories and pages via brute-foce
+gobuster dir -u TARGET-HOST -w SOME-DIR-WORDLIST.txt
+
+# Enumerate directories and pages via brute-foce with extensions
 gobuster dir -u TARGET-HOST -w SOME-DIR-WORDLIST.txt -x php,sh,txt,cgi,html,js,css,py
 ```
 
