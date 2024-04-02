@@ -77,4 +77,10 @@ sudo nmap -sC target-host
 
 # Scan for SMB vulnerability
 sudo nmap -p 445 --script=smb-vuln* target-host
+
+# Enumerate shares folders and users SMB
+sudo nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse target-host
+
+# Enumarate shares folders NFS
+nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount target-host
 ```
