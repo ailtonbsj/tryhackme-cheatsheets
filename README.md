@@ -4,6 +4,7 @@ Some stuffs learned in war rooms from TryHackMe platform.
 
 - Information Gathering
     - [DNSdumpster](https://dnsdumpster.com/)
+    - [Forense](FORENSE.md)
 - Enumeration/Scanning
     - [NMAP](NMAP.md)
     - [Network Scanning](NETWORK-SCANNING.md)
