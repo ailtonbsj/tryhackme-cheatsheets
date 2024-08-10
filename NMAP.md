@@ -83,4 +83,7 @@ sudo nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse target-host
 
 # Enumarate shares folders NFS
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount target-host
+
+# Detect version of service and run default script
+sudo nmap -p 2222 -sV -sC 192.168.1.1
 ```
